@@ -58,10 +58,31 @@ package manager specific guidelines on
 
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+Create a `.env.json` file somewhere on the parent path(s) of you current
+working directory, populate it with environment variables organized in
+‘sections’ like
 
-``` python
-1+1
+``` json
+{
+    "development": {
+        "USR_TOKEN": "super-secret-token",
+    },
+    "production": {
+        "USR_TOKEN": "another-super-secret-token",
+    }
+}
 ```
 
-    2
+Then import it similar to the following code snippet
+
+``` python
+from localenv.envs import production as getenv
+```
+
+This loads the set of variables from under the sectionkey ‘production’
+in the `.env.json` file and makes them accessible via the `getenv`
+function.
+
+``` python
+getenv('USR_TOKEN')
+```

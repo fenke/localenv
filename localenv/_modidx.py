@@ -8,8 +8,4 @@ d = { 'settings': { 'branch': 'main',
   'syms': { 'localenv.envs': { 'localenv.envs._create_getenv': ('core.html#_create_getenv', 'localenv/envs.py'),
                                'localenv.envs.find_env_path': ('core.html#find_env_path', 'localenv/envs.py'),
                                'localenv.envs.get_var_from_env_file': ('core.html#get_var_from_env_file', 'localenv/envs.py'),
-                               'localenv.envs.update_env_file': ('core.html#update_env_file', 'localenv/envs.py')},
-            'localenv.load': { 'localenv.load._create_getenv': ('core.html#_create_getenv', 'localenv/load.py'),
-                               'localenv.load.find_env_path': ('core.html#find_env_path', 'localenv/load.py'),
-                               'localenv.load.get_var_from_env_file': ('core.html#get_var_from_env_file', 'localenv/load.py'),
-                               'localenv.load.update_env_file': ('core.html#update_env_file', 'localenv/load.py')}}}
+                               'localenv.envs.update_env_file': ('core.html#update_env_file', 'localenv/envs.py')}}}
