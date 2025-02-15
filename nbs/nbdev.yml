@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "localenv"
+  site-url: "https://fenke.github.io/localenv"
+  description: "Provide flexible environment variables"
+  repo-branch: main
+  repo-url: "https://github.com/fenke/localenv"
