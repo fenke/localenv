@@ -37,11 +37,16 @@ def find_env_path(env_filename = '.env.json'):
 
 # %% ../nbs/00_core.ipynb 18
 #| eval: false
-with open(find_env_path()) as f:
-    env_vars = json.load(f)
+try:
+    with open(find_env_path()) as f:
+        env_vars = json.load(f)
 
-for k, e in env_vars.items():
-    globals()[k] = _create_getenv(env_vars=e)
+except FileNotFoundError:
+    env_vars = {}
+
+finally:
+    for k, e in env_vars.items():
+        globals()[k] = _create_getenv(env_vars=e)
 
 #globals()['__all__'] = list(set(env_vars.keys()) | set(globals().get('__all__',[])))
 
